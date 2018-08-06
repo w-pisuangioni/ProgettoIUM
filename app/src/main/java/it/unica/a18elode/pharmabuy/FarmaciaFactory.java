@@ -40,6 +40,18 @@ public class FarmaciaFactory {
         Farmacia farmacia4 = Createfarmacia("Farmacia La Morte Nera", "Quartu", "Via Cagliari", "108");
         Farmacia farmacia5 = Createfarmacia("Nome5", "Citta5", "Via5", "Civico5");
 
+
+        farmacia1.addDisponibile(1);
+        farmacia1.addDisponibile( 3);
+        farmacia2.addDisponibile(2);
+        farmacia2.addDisponibile(4);
+        farmacia3.addDisponibile(5);
+        farmacia3.addDisponibile( 1);
+        farmacia4.addDisponibile(2);
+        farmacia4.addDisponibile(4);
+        farmacia5.addDisponibile(4);
+        farmacia5.addDisponibile(5);
+
         listaFarmacie.add(farmacia1);
         listaFarmacie.add(farmacia2);
         listaFarmacie.add(farmacia3);

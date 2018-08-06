@@ -1,5 +1,7 @@
 package it.unica.a18elode.pharmabuy;
 
+import java.util.ArrayList;
+
 /**
  * Created by Willy on 22/02/2018.
  */
@@ -14,6 +16,7 @@ public class Farmacia {
     private String via ;
     private String civico; //se non esistente SNC
     private String citta ;
+    private ArrayList<Integer> listDisponibili;
 
     public Farmacia (){
         this.nome ="";
@@ -70,5 +73,14 @@ public class Farmacia {
 
     public void setCitta(String citta) {
         this.citta = citta;
+    }
+
+
+    public void addDisponibile(int e){
+        this.listDisponibili.add(e);
+    }
+
+    public ArrayList getDisponibili(){
+        return listDisponibili;
     }
 }
