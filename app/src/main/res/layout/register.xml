@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo"
+    tools:context="it.unica.a18elode.pharmabuy.Register"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="insideInset">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/Username"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/border"
+                android:hint="Inserisci Username"
+                android:paddingLeft="5dp"
+                android:textColorHint="#111111" />
+
+            <EditText
+                android:id="@+id/Password"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Username"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/border"
+                android:hint="Inserisci Password"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:textColorHint="#111111" />
+
+            <EditText
+                android:id="@+id/ConfPassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Password"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/border"
+                android:hint="Conferma Password"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:textColorHint="#111111" />
+
+            <EditText
+                android:id="@+id/Email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ConfPassword"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/border"
+                android:hint="Inserisci E-mail"
+                android:paddingLeft="5dp"
+                android:textColorHint="#111111" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_above="@+id/confirm"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/buttons"
+                android:clickable="true"
+                android:text="CONFERMA"
+                android:textColor="#ffffff"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="it.unica.a18elode.pharmabuy.Register"
+    android:background="@drawable/sfondo">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp">
+
+
+        <EditText
+            android:id="@+id/Username"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:paddingLeft="5dp"
+            android:hint="Inserisci Username"
+            android:textColorHint="#111111"
+            android:background="@drawable/border"/>
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Username"
+            android:layout_marginTop="45dp"
+            android:paddingLeft="5dp"
+            android:hint="Inserisci Password"
+            android:inputType="textPassword"
+            android:textColorHint="#111111"
+            android:background="@drawable/border"/>
+
+        <EditText
+            android:id="@+id/ConfPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Password"
+            android:layout_marginTop="45dp"
+            android:paddingLeft="5dp"
+            android:hint="Conferma Password"
+            android:inputType="textPassword"
+            android:textColorHint="#111111"
+            android:background="@drawable/border"
+            />
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ConfPassword"
+            android:layout_marginTop="45dp"
+            android:paddingLeft="5dp"
+            android:hint="Inserisci E-mail"
+            android:textColorHint="#111111"
+            android:background="@drawable/border"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp">
+
+        <Button
+            android:id="@+id/confirm"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttons"
+            android:clickable="true"
+            android:text="CONFERMA"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/logo" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>-->
