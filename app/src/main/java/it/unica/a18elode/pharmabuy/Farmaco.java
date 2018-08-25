@@ -17,7 +17,7 @@ public class Farmaco {
 
     public Farmaco (){
        this.nome ="";
-       this.id = idCount++;
+       this.id = 0;
        this.descrizione="";
        this.prezzo= 0.0f;
        this.ricetta ="";

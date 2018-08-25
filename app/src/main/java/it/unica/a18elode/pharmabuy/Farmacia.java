@@ -81,7 +81,15 @@ public class Farmacia {
         this.listDisponibili.add(e);
     }
 
-    public ArrayList getDisponibili(){
+    public Boolean getDisponibili(int id){
+        int i;
+        for(i = 0; i <= this.listDisponibili.size(); i++) {
+            if (this.listDisponibili.get(i) == id)
+                return true;
+        }
+        return false;
+    }
+    public ArrayList getDisp2(){
         return listDisponibili;
     }
 }

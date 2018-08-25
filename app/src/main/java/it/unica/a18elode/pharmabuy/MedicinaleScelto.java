@@ -29,6 +29,9 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
     private ImageView imageClicked;
 
 
+
+
+
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     @Override
@@ -47,9 +50,14 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
         final ListView mylistFarmacie = (ListView) findViewById(R.id.listViewMedicinaleScelto);
 
         List listFarmacie = new LinkedList();
-        for (int i=0 ;i < (FarmaciaFactory.getInstance().getListaFarmacie()).size(); ++i){
-            listFarmacie.add(FarmaciaFactory.getInstance().getListaFarmacie().get(i));
+        for (int i=0 ;i < (FarmaciaFactory.getInstance().getListaFarmacie()).size(); i++){
+            //if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisponibili(Medicinali.getClickedFarmaco().getId())) {
+                listFarmacie.add(FarmaciaFactory.getInstance().getListaFarmacie());
+            //}
+            /* for(int j = 0;j<FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().size(); j++)
+                if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().get(j) == (Integer)Medicinali.getClickedFarmaco().getId())*/
         }
+
         adapter = new CustomAdapterFarmacie(this, R.layout.rowcustomturno,listFarmacie);
         mylistFarmacie.setAdapter(adapter);
 
