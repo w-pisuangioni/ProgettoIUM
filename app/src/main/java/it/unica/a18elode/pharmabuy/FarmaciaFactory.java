@@ -42,11 +42,11 @@ public class FarmaciaFactory {
 
 
         farmacia1.addDisponibile(1);
-        farmacia1.addDisponibile( 3);
+        farmacia1.addDisponibile(3);
         farmacia2.addDisponibile(2);
         farmacia2.addDisponibile(4);
         farmacia3.addDisponibile(5);
-        farmacia3.addDisponibile( 1);
+        farmacia3.addDisponibile(1);
         farmacia4.addDisponibile(2);
         farmacia4.addDisponibile(4);
         farmacia5.addDisponibile(4);
