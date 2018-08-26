@@ -109,7 +109,7 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
                 Intent intent = new Intent(MedicinaleScelto.this, Ordine.class);
-                clickedFarmaciaND = (Farmacia)mylistFarmacie.getItemAtPosition(position);
+                clickedFarmaciaND = (Farmacia)mylistFarmacieND.getItemAtPosition(position);
 
                 startActivity(intent);
             }
