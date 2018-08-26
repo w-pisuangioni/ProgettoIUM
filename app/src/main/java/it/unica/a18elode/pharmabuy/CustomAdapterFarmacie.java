@@ -27,7 +27,7 @@ public class CustomAdapterFarmacie extends ArrayAdapter<Farmacia>{
         convertView = inflater.inflate(R.layout.rowcustomturno, null);
         TextView nome = (TextView) convertView.findViewById(R.id.textViewNameFarm);
         TextView descrizione = (TextView) convertView.findViewById(R.id.textViewIndirizzo);
-        Farmacia c = FarmaciaFactory.getInstance().getListaFarmacie().get(position);
+        Farmacia c = getItem(position);
         nome.setText(c.getNome() + " " + c.getCitta());
         descrizione.setText(c.getVia() + ", " + c.getCivico() + " " + c.getCitta()); //AGGIUNGERE DISPONIBILITà
         //int id = context.getResources().getIdentifier(c.getImage(), "drawable", context.getPackageName());

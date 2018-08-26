@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../../../pisuw/Desktop/IUM/Progetto IUM/PharmaBuy/ProgettoIUM/PharmaBuy.iml" filepath="$PROJECT_DIR$/../../../../pisuw/Desktop/IUM/Progetto IUM/PharmaBuy/ProgettoIUM/PharmaBuy.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProgettoIUM.iml" filepath="$PROJECT_DIR$/ProgettoIUM.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../pisuw/Desktop/IUM/Progetto IUM/PharmaBuy/ProgettoIUM/app/app.iml" filepath="$PROJECT_DIR$/../../../../pisuw/Desktop/IUM/Progetto IUM/PharmaBuy/ProgettoIUM/app/app.iml" />
     </modules>
   </component>
 </project>

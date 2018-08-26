@@ -40,7 +40,7 @@ public class FarmacoFactory {
         farmaco2.setImage("moment");
 
         Farmaco farmaco3 = new Farmaco();
-        farmaco2.setId(3);
+        farmaco3.setId(3);
         farmaco3.setNome("Oki");
         farmaco3.setDescrizione("L'OKI è un medicinale usato per scopi terapeutici per curare le varie patologie mediche." +
                 "Trattamento sintomatico e di breve durata di stati infiammatori associati a dolore quali quelli a carico dell'apparato" +
@@ -50,7 +50,7 @@ public class FarmacoFactory {
         farmaco3.setImage("oki");
 
         Farmaco farmaco4 = new Farmaco();
-        farmaco2.setId(4);
+        farmaco4.setId(4);
         farmaco4.setNome("Voltaren");
         farmaco4.setDescrizione("Il Voltaren è un farmaco anti-infiammatorio non steroideo (FANS) " +
                 "tra i più utilizzati come anti-infiammatorio, antireumatico e soprattutto come analgesico.");
@@ -60,7 +60,7 @@ public class FarmacoFactory {
         farmaco4.setImage("voltaren");
 
         Farmaco farmaco5 = new Farmaco();
-        farmaco2.setId(5);
+        farmaco5.setId(5);
         farmaco5.setNome("Aspirina");
         farmaco5.setDescrizione("L'aspirina è indicata come terapia sintomatica nel trattamento dei " +
                         "dolori infiammatori di varia natura e degli stati febbrili e sindromi influenzali e da raffreddamento.");

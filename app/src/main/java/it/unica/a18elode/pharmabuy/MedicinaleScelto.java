@@ -51,11 +51,13 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
 
         List listFarmacie = new LinkedList();
         for (int i=0 ;i < (FarmaciaFactory.getInstance().getListaFarmacie()).size(); i++){
-            //if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisponibili(Medicinali.getClickedFarmaco().getId())) {
-                listFarmacie.add(FarmaciaFactory.getInstance().getListaFarmacie());
-            //}
+            Integer idM = Medicinali.getClickedFarmaco().getId();
+            if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().contains(idM))
+            //if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisponibili(Medicinali.getClickedFarmaco().getId()))
             /* for(int j = 0;j<FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().size(); j++)
                 if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().get(j) == (Integer)Medicinali.getClickedFarmaco().getId())*/
+            listFarmacie.add(FarmaciaFactory.getInstance().getListaFarmacie().get(i));
+
         }
 
         adapter = new CustomAdapterFarmacie(this, R.layout.rowcustomturno,listFarmacie);
