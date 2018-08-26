@@ -10,6 +10,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,6 +30,9 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
 
     private TextView nameClicked;
     private ImageView imageClicked;
+
+    private static Farmacia clickedFarmacia;
+    private static Farmacia clickedFarmaciaND;
 
 
 
@@ -48,11 +53,14 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
         navigationView.setNavigationItemSelectedListener(this);
 
         //listview
-        final ListView mylistFarmacie = (ListView) findViewById(R.id.listViewMedicinaleScelto);
-        final ListView mylistFarmacieND = (ListView) findViewById(R.id.listViewNonDisp);
+        final ListView mylistFarmacie = (ListView) findViewById(R.id.listViewMedicinaleScelto); //listView Per le farmacie disponibili
+        final ListView mylistFarmacieND = (ListView) findViewById(R.id.listViewNonDisp);//listView Per le farmacie non disponibili
 
+        //liste temporanee per l'adapter
         List listFarmacie = new LinkedList();
         List listFarmacieND= new LinkedList();
+
+        //controlla le farmacia dove è disponibile il medicinale e le salva nella linkedlist
         for (int i=0 ;i < (FarmaciaFactory.getInstance().getListaFarmacie()).size(); i++){
             Integer idM = Medicinali.getClickedFarmaco().getId();
             if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().contains(idM))
@@ -61,25 +69,51 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
                 if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().get(j) == (Integer)Medicinali.getClickedFarmaco().getId())*/
             listFarmacie.add(FarmaciaFactory.getInstance().getListaFarmacie().get(i));
         }
-
+        //per le farmacie non disponibili
         for (int i=0 ;i < (FarmaciaFactory.getInstance().getListaFarmacie()).size(); i++){
             Integer idM = Medicinali.getClickedFarmaco().getId();
             if(!FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().contains(idM))
                 listFarmacieND.add(FarmaciaFactory.getInstance().getListaFarmacie().get(i));
         }
 
+        //crea gli adapter e assegna le linked list
         adapter = new CustomAdapterFarmacie(this, R.layout.rowcustomturno,listFarmacie);
         mylistFarmacie.setAdapter(adapter);
         adapterND = new CustomAdapterFarmacie(this, R.layout.rowcustomturno,listFarmacieND);
         mylistFarmacieND.setAdapter(adapterND);
 
+        //mostra il nome del farmaco cliccato
         nameClicked = (TextView)findViewById(R.id.selected_farmaco);
         nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
 
+        //mostra l'immagine del farmaco cliccato
         imageClicked=(ImageView)findViewById(R.id.selected_image);
         Context context = imageClicked.getContext();
         int id = context.getResources().getIdentifier(Medicinali.getClickedFarmaco().getImage(), "drawable", context.getPackageName());
         imageClicked.setImageResource(id);
+
+        //Serve per poter cliccare nella lista delle farmacie in cui è disponibile il farmaco
+        mylistFarmacie.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent intent = new Intent(MedicinaleScelto.this, Acquisto.class);
+                clickedFarmacia = (Farmacia)mylistFarmacie.getItemAtPosition(position);
+
+                startActivity(intent);
+            }
+        });
+        //Per le farmacie non disponibili
+        mylistFarmacieND.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent intent = new Intent(MedicinaleScelto.this, Ordine.class);
+                clickedFarmaciaND = (Farmacia)mylistFarmacie.getItemAtPosition(position);
+
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -114,6 +148,12 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
             Toast.makeText(this, "Farmacie", Toast.LENGTH_SHORT).show();
         }
         return false;
+    }
+    public static Farmacia getClickedFarmacia(){
+        return clickedFarmacia;
+    }
+    public static Farmacia getClickedFarmaciaND(){
+        return clickedFarmaciaND;
     }
 
 }

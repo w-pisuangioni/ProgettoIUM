@@ -27,10 +27,12 @@
             android:label="Medicinali" />
         <activity
             android:name=".FarmacieTurno"
-            android:label="Farmacie di Turno"></activity>
-
-        <activity android:name=".MedicinaleScelto"
-            android:label="Medicinale Scelto"></activity>
+            android:label="Farmacie di Turno" />
+        <activity
+            android:name=".MedicinaleScelto"
+            android:label="Medicinale Scelto" />
+        <activity android:name=".Acquisto" />
+        <activity android:name=".Ordine"></activity>
     </application>
 
 </manifest>
