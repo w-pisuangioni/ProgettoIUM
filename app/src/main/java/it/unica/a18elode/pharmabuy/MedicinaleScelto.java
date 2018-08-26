@@ -24,6 +24,7 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
     private ActionBarDrawerToggle toggle;
 
     private CustomAdapterFarmacie adapter;
+    private CustomAdapterFarmacie adapterND;
 
     private TextView nameClicked;
     private ImageView imageClicked;
@@ -48,8 +49,10 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
 
         //listview
         final ListView mylistFarmacie = (ListView) findViewById(R.id.listViewMedicinaleScelto);
+        final ListView mylistFarmacieND = (ListView) findViewById(R.id.listViewNonDisp);
 
         List listFarmacie = new LinkedList();
+        List listFarmacieND= new LinkedList();
         for (int i=0 ;i < (FarmaciaFactory.getInstance().getListaFarmacie()).size(); i++){
             Integer idM = Medicinali.getClickedFarmaco().getId();
             if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().contains(idM))
@@ -57,11 +60,18 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
             /* for(int j = 0;j<FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().size(); j++)
                 if(FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().get(j) == (Integer)Medicinali.getClickedFarmaco().getId())*/
             listFarmacie.add(FarmaciaFactory.getInstance().getListaFarmacie().get(i));
+        }
 
+        for (int i=0 ;i < (FarmaciaFactory.getInstance().getListaFarmacie()).size(); i++){
+            Integer idM = Medicinali.getClickedFarmaco().getId();
+            if(!FarmaciaFactory.getInstance().getListaFarmacie().get(i).getDisp2().contains(idM))
+                listFarmacieND.add(FarmaciaFactory.getInstance().getListaFarmacie().get(i));
         }
 
         adapter = new CustomAdapterFarmacie(this, R.layout.rowcustomturno,listFarmacie);
         mylistFarmacie.setAdapter(adapter);
+        adapterND = new CustomAdapterFarmacie(this, R.layout.rowcustomturno,listFarmacieND);
+        mylistFarmacieND.setAdapter(adapterND);
 
         nameClicked = (TextView)findViewById(R.id.selected_farmaco);
         nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
