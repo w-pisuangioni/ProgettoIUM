@@ -42,6 +42,39 @@
             />
 
     </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:id="@+id/selected_farmacia"
+        android:background="#ffffff" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:id="@+id/selected_prezzo"
+        android:background="#ffffff" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:id="@+id/selected_ricetta"
+        android:background="#ffffff" />
+
+
+</RelativeLayout>
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

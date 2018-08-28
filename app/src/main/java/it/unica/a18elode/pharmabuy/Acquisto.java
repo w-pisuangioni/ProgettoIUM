@@ -13,11 +13,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class Acquisto extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
     private TextView nameClicked;
     private ImageView imageClicked;
+    private TextView nameFarmacia;
+    private TextView prezzo;
+    private TextView ricetta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,18 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
         Context context = imageClicked.getContext();
         int id = context.getResources().getIdentifier(Medicinali.getClickedFarmaco().getImage(), "drawable", context.getPackageName());
         imageClicked.setImageResource(id);
+
+        nameFarmacia=(TextView)findViewById(R.id.selected_farmacia);
+        nameFarmacia.setText(MedicinaleScelto.getClickedFarmacia().getNome()+(" ")+MedicinaleScelto.getClickedFarmacia().getVia());
+
+        Float prz = Medicinali.getClickedFarmaco().getPrezzo();
+        prezzo=(TextView)findViewById(R.id.selected_prezzo);
+        prezzo.setText(prz.toString());
+
+        ricetta=(TextView)findViewById(R.id.selected_ricetta);
+        ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
+
+
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){

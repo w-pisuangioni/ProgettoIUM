@@ -18,6 +18,9 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
     private ActionBarDrawerToggle toggle;
     private TextView nameClicked;
     private ImageView imageClicked;
+    private TextView nameFarmacia;
+    private TextView prezzo;
+    private TextView ricetta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,19 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
         Context context = imageClicked.getContext();
         int id = context.getResources().getIdentifier(Medicinali.getClickedFarmaco().getImage(), "drawable", context.getPackageName());
         imageClicked.setImageResource(id);
+
+        nameFarmacia=(TextView)findViewById(R.id.selected_farmaciaO);
+        nameFarmacia.setText(MedicinaleScelto.getClickedFarmaciaND().getNome()+(" ")+MedicinaleScelto.getClickedFarmaciaND().getVia());
+
+        Float prz = Medicinali.getClickedFarmaco().getPrezzo();
+        prezzo=(TextView)findViewById(R.id.selected_prezzoO);
+        prezzo.setText(prz.toString());
+
+        ricetta=(TextView)findViewById(R.id.selected_ricettaO);
+        ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
+
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         if(toggle.onOptionsItemSelected(item))
