@@ -40,7 +40,6 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="70dp"
             />
-
     </RelativeLayout>
 <RelativeLayout
     android:layout_width="match_parent"
@@ -73,6 +72,20 @@
         android:id="@+id/selected_ricetta"
         android:background="#ffffff" />
 
+    <Button
+        android:id="@+id/button_acquisto"
+        android:layout_width="300dp"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_height="60dp"
+        android:layout_below="@+id/selected_ricetta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/buttons"
+        android:clickable="true"
+        android:text="    Acquista"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="25dp" />
 
 </RelativeLayout>
     <android.support.design.widget.NavigationView

@@ -73,6 +73,21 @@
             android:id="@+id/selected_ricettaO"
             android:background="#ffffff" />
 
+        <Button
+            android:id="@+id/button_ordine"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/selected_ricettaO"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/order_button"
+            android:clickable="true"
+            android:textAlignment="textStart"
+            android:text="    Ordina"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
 
     </RelativeLayout>
     <android.support.design.widget.NavigationView
