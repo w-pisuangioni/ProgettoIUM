@@ -7,6 +7,14 @@
     tools:context="it.unica.a18elode.pharmabuy.Acquisto"
     android:id="@+id/drawer"
     android:background="@drawable/sfondo">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:background="#ffffff"></RelativeLayout>
     <RelativeLayout
         android:id="@+id/menu_relative_layout"
         android:layout_width="match_parent"
@@ -24,13 +32,24 @@
             android:background="@drawable/logo" />
 
         <TextView
-            android:layout_width="320dp"
+            android:layout_width="342dp"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="90dp"
             android:id="@+id/selected_farmacoA"
-            android:background="#ffffff"/>
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#0000e0"/>
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/selected_farmacoA"
+            android:id="@+id/descrizioneFarmacoA"
+            android:textSize="18sp"
+            android:textColor="#000000"/>
 
         <ImageView
             android:id="@+id/selected_imageA"
@@ -50,18 +69,12 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"
-        android:id="@+id/selected_farmacia"
-        android:background="#ffffff" />
-
-    <TextView
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:id="@+id/selected_prezzo"
-        android:background="#ffffff" />
+        android:id="@+id/selected_farmacia"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+         />
 
     <TextView
         android:layout_width="320dp"
@@ -69,8 +82,23 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="260dp"
+        android:id="@+id/selected_prezzo"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+         />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp"
         android:id="@+id/selected_ricetta"
-        android:background="#ffffff" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        />
 
     <Button
         android:id="@+id/button_acquisto"
@@ -88,6 +116,7 @@
         android:textSize="25dp" />
 
 </RelativeLayout>
+
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

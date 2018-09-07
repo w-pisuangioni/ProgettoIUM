@@ -20,6 +20,7 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
     private ActionBarDrawerToggle toggle;
     private TextView nameClicked;
     private ImageView imageClicked;
+    private TextView descFarmacia;
     private TextView nameFarmacia;
     private TextView prezzo;
     private TextView ricetta;
@@ -39,6 +40,9 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
         //mostra il nome del farmaco cliccato
         nameClicked = (TextView)findViewById(R.id.selected_farmacoA);
         nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
+
+        descFarmacia = (TextView)findViewById(R.id.descrizioneFarmacoA);
+        descFarmacia.setText(Medicinali.getClickedFarmaco().getDescrizione());
 
         //mostra l'immagine del farmaco cliccato
         imageClicked=(ImageView)findViewById(R.id.selected_imageA);

@@ -17,6 +17,7 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
     private TextView nameClicked;
+    private TextView descFarmacia;
     private ImageView imageClicked;
     private TextView nameFarmacia;
     private TextView prezzo;
@@ -37,6 +38,9 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
         //mostra il nome del farmaco cliccato
         nameClicked = (TextView)findViewById(R.id.selected_farmaco_ordine);
         nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
+
+        descFarmacia = (TextView)findViewById(R.id.descrizioneFarmacoO);
+        descFarmacia.setText(Medicinali.getClickedFarmaco().getDescrizione());
 
         //mostra l'immagine del farmaco cliccato
         imageClicked=(ImageView)findViewById(R.id.selected_image_farmaco_ordine);
