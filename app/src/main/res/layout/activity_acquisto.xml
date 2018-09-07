@@ -44,7 +44,7 @@
 
         <TextView
             android:layout_width="320dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/selected_farmacoA"
             android:id="@+id/descrizioneFarmacoA"
@@ -59,17 +59,17 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="70dp"
             />
-    </RelativeLayout>
+  <!--  </RelativeLayout>
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content">-->
 
     <TextView
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/descrizioneFarmacoA"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/selected_farmacia"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -79,9 +79,9 @@
     <TextView
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/selected_farmacia"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/selected_prezzo"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -91,9 +91,9 @@
     <TextView
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/selected_prezzo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/selected_ricetta"
         android:textSize="18sp"
         android:textStyle="bold"

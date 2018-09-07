@@ -32,11 +32,11 @@
             android:background="@drawable/logo" />
 
         <TextView
-            android:layout_width="320dp"
+            android:layout_width="342dp"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="90dp"
             android:id="@+id/selected_farmaco_ordine"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -75,7 +75,7 @@
             android:id="@+id/selected_farmaciaO"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#0000e0"
+            android:textColor="#000000"
             />
 
         <TextView
@@ -87,7 +87,7 @@
             android:id="@+id/selected_prezzoO"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#0000e0"
+            android:textColor="#000000"
              />
 
         <TextView
@@ -99,10 +99,8 @@
             android:id="@+id/selected_ricettaO"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#0000e0"
+            android:textColor="#000000"
              />
-
-
 
         <Button
             android:id="@+id/button_ordine"
