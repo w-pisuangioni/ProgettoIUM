@@ -31,10 +31,15 @@
         <activity
             android:name=".MedicinaleScelto"
             android:label="Medicinale Scelto" />
-        <activity android:name=".Acquisto"
-            android:label="Acquisto"/>
-        <activity android:name=".Ordine"
-            android:label="Ordine"></activity>
+        <activity
+            android:name=".Acquisto"
+            android:label="Acquisto" />
+        <activity
+            android:name=".Ordine"
+            android:label="Ordine" />
+        <activity
+            android:name=".Riepilogo"
+            android:label="Riepilogo"/>
     </application>
 
 </manifest>

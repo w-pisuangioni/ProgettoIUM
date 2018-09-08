@@ -60,25 +60,28 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
 
         Float prz = Medicinali.getClickedFarmaco().getPrezzo();
         prezzo=(TextView)findViewById(R.id.selected_prezzo);
-        prezzo.setText(prz.toString());
+        prezzo.setText(("Prezzo: "+prz.toString()+(" €")));
 
         ricetta=(TextView)findViewById(R.id.selected_ricetta);
         ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
 
 
-/*
-        buy=(Button)findViewById(R.id.button_acquisto);
-        buy.setOnClickListener(new View.OnClickListener() {
+        init();
+    }
 
+    public void init() {
+        buy = (Button) findViewById(R.id.button_acquisto);
+        buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog alert = builder.create();
-                alert.show();
-            }
-        });*/
+                Intent goToMed = new Intent(Acquisto.this, Riepilogo.class);
 
+                startActivity(goToMed);
+            }
+        });
 
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         if(toggle.onOptionsItemSelected(item))

@@ -14,7 +14,7 @@
         android:layout_marginTop="65dp"
         android:layout_marginRight="28dp"
         android:layout_marginLeft="28dp"
-        android:background="#ffffff"></RelativeLayout>
+        android:background="#abd7b3"></RelativeLayout>
     <RelativeLayout
         android:id="@+id/menu_relative_layout"
         android:layout_width="match_parent"

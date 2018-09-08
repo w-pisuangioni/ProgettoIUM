@@ -53,7 +53,7 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
 
         Float prz = Medicinali.getClickedFarmaco().getPrezzo();
         prezzo=(TextView)findViewById(R.id.selected_prezzoO);
-        prezzo.setText(prz.toString());
+        prezzo.setText(("Prezzo: "+prz.toString()+(" €")));
 
         ricetta=(TextView)findViewById(R.id.selected_ricettaO);
         ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
