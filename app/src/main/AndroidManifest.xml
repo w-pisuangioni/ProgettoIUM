@@ -39,7 +39,11 @@
             android:label="Ordine" />
         <activity
             android:name=".Riepilogo"
-            android:label="Riepilogo"/>
+            android:label="Riepilogo" />
+        <activity
+            android:name=".RiepilogoOrdine"
+            android:label="RiepilogoOrdine"
+            ></activity>
     </application>
 
 </manifest>

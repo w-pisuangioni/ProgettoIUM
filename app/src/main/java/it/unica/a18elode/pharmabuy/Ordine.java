@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,42 +24,45 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
     private TextView nameFarmacia;
     private TextView prezzo;
     private TextView ricetta;
+    private Button order;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordine);
-        drawer=(DrawerLayout) findViewById(R.id.drawer);
-        toggle = new ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close);
+        drawer = (DrawerLayout) findViewById(R.id.drawer);
+        toggle = new ActionBarDrawerToggle(this, drawer, R.string.open, R.string.close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        NavigationView navigationView=(NavigationView)findViewById(R.id.navigation_view_ordine);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view_ordine);
         navigationView.setNavigationItemSelectedListener(this);
 
         //mostra il nome del farmaco cliccato
-        nameClicked = (TextView)findViewById(R.id.selected_farmaco_ordine);
-        nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
+        nameClicked = (TextView) findViewById(R.id.selected_farmaco_ordine);
+        nameClicked.setText(Medicinali.getClickedFarmaco().getNome() + (" ") + Medicinali.getClickedFarmaco().getTipo());
 
-        descFarmacia = (TextView)findViewById(R.id.descrizioneFarmacoO);
+        descFarmacia = (TextView) findViewById(R.id.descrizioneFarmacoO);
         descFarmacia.setText(Medicinali.getClickedFarmaco().getDescrizione());
 
         //mostra l'immagine del farmaco cliccato
-        imageClicked=(ImageView)findViewById(R.id.selected_image_farmaco_ordine);
+        imageClicked = (ImageView) findViewById(R.id.selected_image_farmaco_ordine);
         Context context = imageClicked.getContext();
         int id = context.getResources().getIdentifier(Medicinali.getClickedFarmaco().getImage(), "drawable", context.getPackageName());
         imageClicked.setImageResource(id);
 
-        nameFarmacia=(TextView)findViewById(R.id.selected_farmaciaO);
-        nameFarmacia.setText(MedicinaleScelto.getClickedFarmaciaND().getNome()+(" ")+MedicinaleScelto.getClickedFarmaciaND().getVia()+(" ")+MedicinaleScelto.getClickedFarmaciaND().getCivico());
+        nameFarmacia = (TextView) findViewById(R.id.selected_farmaciaO);
+        nameFarmacia.setText(MedicinaleScelto.getClickedFarmaciaND().getNome() + (" ") + MedicinaleScelto.getClickedFarmaciaND().getVia() + (" ") + MedicinaleScelto.getClickedFarmaciaND().getCivico());
 
         Float prz = Medicinali.getClickedFarmaco().getPrezzo();
-        prezzo=(TextView)findViewById(R.id.selected_prezzoO);
-        prezzo.setText(("Prezzo: "+prz.toString()+(" €")));
+        prezzo = (TextView) findViewById(R.id.selected_prezzoO);
+        prezzo.setText(("Prezzo: " + prz.toString() + (" €")));
 
-        ricetta=(TextView)findViewById(R.id.selected_ricettaO);
+        ricetta = (TextView) findViewById(R.id.selected_ricettaO);
         ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
 
+        init();
     }
 
     @Override
@@ -91,5 +96,17 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
             Toast.makeText(this, "Farmacie", Toast.LENGTH_SHORT).show();
         }
         return false;
+    }
+
+    public void init() {
+        order = (Button) findViewById(R.id.button_ordine);
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToMed = new Intent(Ordine.this, RiepilogoOrdine.class);
+                startActivity(goToMed);
+            }
+        });
+
     }
 }

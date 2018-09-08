@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Riepilogo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class RiepilogoOrdine extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
@@ -28,40 +28,40 @@ public class Riepilogo extends AppCompatActivity implements NavigationView.OnNav
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_riepilogo);
+        setContentView(R.layout.activity_riepilogo_ordine);
         drawer=(DrawerLayout) findViewById(R.id.drawer);
         toggle = new ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        NavigationView navigationView=(NavigationView)findViewById(R.id.navigation_view_riepilogo);
+        NavigationView navigationView=(NavigationView)findViewById(R.id.navigation_view_riepilogoO);
         navigationView.setNavigationItemSelectedListener(this);
 
         //mostra il nome del farmaco cliccato
-        nameClicked = (TextView)findViewById(R.id.selected_farmaco_riepilogo);
+        nameClicked = (TextView)findViewById(R.id.selected_farmaco_riepilogoO);
         nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
 
-        descFarmacia = (TextView)findViewById(R.id.descrizioneFarmacoR);
+        descFarmacia = (TextView)findViewById(R.id.descrizioneFarmacoRO);
         descFarmacia.setText(Medicinali.getClickedFarmaco().getDescrizione());
 
         //mostra l'immagine del farmaco cliccato
-        imageClicked=(ImageView)findViewById(R.id.selected_imageR);
+        imageClicked=(ImageView)findViewById(R.id.selected_imageRO);
         Context context = imageClicked.getContext();
         int id = context.getResources().getIdentifier(Medicinali.getClickedFarmaco().getImage(), "drawable", context.getPackageName());
         imageClicked.setImageResource(id);
 
-        nameFarmacia=(TextView)findViewById(R.id.selected_farmaciaR);
-        nameFarmacia.setText(MedicinaleScelto.getClickedFarmacia().getNome()+(" ")+MedicinaleScelto.getClickedFarmacia().getVia()+(" ")+MedicinaleScelto.getClickedFarmacia().getCivico());
+        nameFarmacia=(TextView)findViewById(R.id.selected_farmaciaRO);
+        nameFarmacia.setText(MedicinaleScelto.getClickedFarmaciaND().getNome()+(" ")+MedicinaleScelto.getClickedFarmaciaND().getVia()+(" ")+MedicinaleScelto.getClickedFarmaciaND().getCivico());
 
         Float prz = Medicinali.getClickedFarmaco().getPrezzo();
-        prezzo=(TextView)findViewById(R.id.selected_prezzoR);
+        prezzo=(TextView)findViewById(R.id.selected_prezzoRO);
         prezzo.setText(("Prezzo: "+prz.toString()+(" €")));
 
-        ricetta=(TextView)findViewById(R.id.selected_ricettaR);
+        ricetta=(TextView)findViewById(R.id.selected_ricettaRO);
         ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
 
-        conferma=(TextView)findViewById(R.id.conferma);
-        conferma.setText("   Acquisto andato a buon fine");
+        conferma=(TextView)findViewById(R.id.confermaO);
+        conferma.setText("   Ordine andato a buon fine");
     }
 
 
@@ -78,7 +78,7 @@ public class Riepilogo extends AppCompatActivity implements NavigationView.OnNav
         int id = item.getItemId();
         if(id == R.id.homeDrawer)
         {
-            Intent goToFarm = new Intent(Riepilogo.this, Menu.class);
+            Intent goToFarm = new Intent(RiepilogoOrdine.this, Menu.class);
 
             startActivity(goToFarm);
         }

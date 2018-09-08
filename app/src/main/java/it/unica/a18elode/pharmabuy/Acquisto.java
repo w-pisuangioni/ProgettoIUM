@@ -75,7 +75,6 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 Intent goToMed = new Intent(Acquisto.this, Riepilogo.class);
-
                 startActivity(goToMed);
             }
         });
