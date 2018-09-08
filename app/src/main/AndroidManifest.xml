@@ -42,8 +42,13 @@
             android:label="Riepilogo" />
         <activity
             android:name=".RiepilogoOrdine"
-            android:label="RiepilogoOrdine"
-            ></activity>
+            android:label="Riepilogo Ordine" />
+        <activity
+            android:name=".AcquistiRecenti"
+            android:label="Acquisti Recenti"/>
+        <activity
+            android:name=".StatoOrdini"
+            android:label="Stato Ordini"></activity>
     </application>
 
 </manifest>

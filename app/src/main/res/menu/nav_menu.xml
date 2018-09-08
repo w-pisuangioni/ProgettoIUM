@@ -11,4 +11,10 @@
     <item android:id="@+id/medicinaliDrawer"
         android:title="Medicinali">
     </item>
+    <item android:id="@+id/recentBuy"
+        android:title="Acquisti Recenti">
+    </item>
+    <item android:id="@+id/orderState"
+        android:title="Stato Ordini">
+    </item>
 </menu>

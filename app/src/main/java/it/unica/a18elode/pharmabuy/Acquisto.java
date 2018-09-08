@@ -105,11 +105,27 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
         }*/
         if(id == R.id.medicinaliDrawer)
         {
-            Toast.makeText(this, "Medicinali", Toast.LENGTH_SHORT).show();
+            Intent goToFarm = new Intent(Acquisto.this, Medicinali.class);
+
+            startActivity(goToFarm);
         }
         if(id == R.id.farmacieDrawer)
         {
-            Toast.makeText(this, "Farmacie", Toast.LENGTH_SHORT).show();
+            Intent goToFarm = new Intent(Acquisto.this, FarmacieTurno.class);
+
+            startActivity(goToFarm);
+        }
+        if(id == R.id.recentBuy)
+        {
+            Intent goToFarm = new Intent(Acquisto.this, AcquistiRecenti.class);
+
+            startActivity(goToFarm);
+        }
+        if(id == R.id.orderState)
+        {
+            Intent goToFarm = new Intent(Acquisto.this, StatoOrdini.class);
+
+            startActivity(goToFarm);
         }
         return false;
     }

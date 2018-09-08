@@ -108,13 +108,27 @@ public class Medicinali extends AppCompatActivity implements NavigationView.OnNa
         }
         if(id == R.id.medicinaliDrawer)
         {
-            Intent goToScelto = new Intent(Medicinali.this, MedicinaleScelto.class);
+            Intent goToFarm = new Intent(Medicinali.this, Medicinali.class);
 
-            startActivity(goToScelto);
+            startActivity(goToFarm);
         }
         if(id == R.id.farmacieDrawer)
         {
-            Toast.makeText(this, "Farmacie", Toast.LENGTH_SHORT).show();
+            Intent goToFarm = new Intent(Medicinali.this, FarmacieTurno.class);
+
+            startActivity(goToFarm);
+        }
+        if(id == R.id.recentBuy)
+        {
+            Intent goToFarm = new Intent(Medicinali.this, AcquistiRecenti.class);
+
+            startActivity(goToFarm);
+        }
+        if(id == R.id.orderState)
+        {
+            Intent goToFarm = new Intent(Medicinali.this, StatoOrdini.class);
+
+            startActivity(goToFarm);
         }
         return false;
     }
