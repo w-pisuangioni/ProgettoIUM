@@ -33,12 +33,12 @@
             android:background="@drawable/logo" />
 
         <TextView
-            android:layout_width="342dp"
-            android:layout_height="50dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="90dp"
-            android:id="@+id/selected_farmacoA"
+            android:layout_marginLeft="100dp"
+            android:id="@+id/selected_farmaco_riepilogo"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#0000e0"/>
@@ -47,18 +47,18 @@
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/selected_farmacoA"
-            android:id="@+id/descrizioneFarmacoA"
+            android:layout_below="@id/selected_farmaco_riepilogo"
+            android:id="@+id/descrizioneFarmacoR"
             android:textSize="18sp"
             android:textColor="#000000"/>
 
         <ImageView
-            android:id="@+id/selected_imageA"
+            android:id="@+id/selected_imageR"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="90dp"
             />
         <!--  </RelativeLayout>
       <RelativeLayout
@@ -67,11 +67,11 @@
 
         <TextView
             android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/descrizioneFarmacoA"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descrizioneFarmacoR"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
-            android:id="@+id/selected_farmacia"
+            android:id="@+id/selected_farmaciaR"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#000000"
@@ -80,10 +80,36 @@
         <TextView
             android:layout_width="320dp"
             android:layout_height="50dp"
-            android:layout_below="@id/selected_farmacia"
+            android:layout_below="@id/selected_farmaciaR"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:id="@+id/orari"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:text="lun - ven: 9:00-13:00 / 17:00-20:00\nsab: 9:00 - 13:00"
+            />
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orari"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
-            android:id="@+id/selected_prezzo"
+            android:id="@+id/selected_prezzoR"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            />
+
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selected_prezzoR"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:id="@+id/selected_ricettaR"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#000000"
@@ -92,14 +118,29 @@
         <TextView
             android:layout_width="320dp"
             android:layout_height="50dp"
-            android:layout_below="@id/selected_prezzo"
+            android:layout_below="@id/selected_ricettaR"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
-            android:id="@+id/selected_ricetta"
+            android:id="@+id/dataR"
+            android:text="Data ritiro: 15-09-2018"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#000000"
             />
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dataR"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:id="@+id/conferma"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:background="#03b900"
+            android:text="   Acquisto andato a buon fine"
+            />
+
 
     </RelativeLayout>
     <android.support.design.widget.NavigationView

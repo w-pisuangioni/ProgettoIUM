@@ -56,7 +56,7 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
         imageClicked.setImageResource(id);
 
         nameFarmacia=(TextView)findViewById(R.id.selected_farmacia);
-        nameFarmacia.setText(MedicinaleScelto.getClickedFarmacia().getNome()+(" ")+MedicinaleScelto.getClickedFarmacia().getVia());
+        nameFarmacia.setText(MedicinaleScelto.getClickedFarmacia().getNome()+(" ")+MedicinaleScelto.getClickedFarmacia().getVia()+(" ")+MedicinaleScelto.getClickedFarmacia().getCivico());
 
         Float prz = Medicinali.getClickedFarmaco().getPrezzo();
         prezzo=(TextView)findViewById(R.id.selected_prezzo);

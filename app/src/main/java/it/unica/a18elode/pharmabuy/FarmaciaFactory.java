@@ -36,11 +36,11 @@ public class FarmaciaFactory {
         farmacia1.setNome("Farmacia Fitts");
         farmacia1.setCitta("Cagliari");
         farmacia1.setVia("Via Ospedale");
-        farmacia1.setCivico("SNC");
-        Farmacia farmacia2 = Createfarmacia("Nome", "Citta", "Via", "Civico");
+        farmacia1.setCivico("11");
+        Farmacia farmacia2 = Createfarmacia("Farmacia Marongiu", "Cagliari", "Via Dante", "23");
         Farmacia farmacia3 = Createfarmacia("Farmacia Piroddi", "Cagliari", "Via Dolianova", "22");
         Farmacia farmacia4 = Createfarmacia("Farmacia La Morte Nera", "Quartu", "Via Cagliari", "108");
-        Farmacia farmacia5 = Createfarmacia("Nome5", "Citta5", "Via5", "Civico5");
+        Farmacia farmacia5 = Createfarmacia("Farmacia San Carlo", "Cagliari", "Via F.Ciusa", "16");
 
 
         farmacia1.addDisponibile(1);
