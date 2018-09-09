@@ -120,6 +120,8 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
             @Override
             public void onClick(View v) {
                 Intent goToMed = new Intent(Ordine.this, RiepilogoOrdine.class);
+                Medicinali.getClickedFarmaco().setFarmaciaOrdine(MedicinaleScelto.getClickedFarmaciaND());
+                StatoOrdini.addOrdine(Medicinali.getClickedFarmaco());
                 startActivity(goToMed);
             }
         });

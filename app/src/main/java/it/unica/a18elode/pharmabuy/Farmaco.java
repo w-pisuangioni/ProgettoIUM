@@ -16,6 +16,7 @@ public class Farmaco {
     private String tipo;
    // private String data;
     private Farmacia farmaciaAcquisto;
+    private Farmacia farmaciaOrdine;
 
     public Farmaco (){
        this.nome ="";
@@ -27,6 +28,7 @@ public class Farmaco {
       // this.data="";
        this.tipo="";
        this.farmaciaAcquisto = new Farmacia();
+       this.farmaciaOrdine = new Farmacia();
        idCount++;
     }
 
@@ -91,6 +93,10 @@ public class Farmaco {
     public void setFarmaciaAcquisto(Farmacia f){this.farmaciaAcquisto = f;}
 
     public Farmacia getFarmaciaAcquisto(){return this.farmaciaAcquisto;}
+
+    public void setFarmaciaOrdine(Farmacia f){this.farmaciaOrdine = f;}
+
+    public Farmacia getFarmaciaOrdine(){return this.farmaciaOrdine;}
 
 }
 
