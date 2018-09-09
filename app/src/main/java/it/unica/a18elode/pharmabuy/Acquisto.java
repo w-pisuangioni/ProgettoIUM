@@ -75,6 +75,9 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 Intent goToMed = new Intent(Acquisto.this, Riepilogo.class);
+                Medicinali.getClickedFarmaco().setFarmaciaAcquisto(MedicinaleScelto.getClickedFarmacia());
+                AcquistiRecenti.addAcquisto(Medicinali.getClickedFarmaco());
+                //CustomAdapterAcquisti.addFarmaciaAcquisti(MedicinaleScelto.getClickedFarmacia());
                 startActivity(goToMed);
             }
         });

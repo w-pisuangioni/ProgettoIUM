@@ -14,6 +14,8 @@ public class Farmaco {
     private String ricetta;
     private String image;
     private String tipo;
+   // private String data;
+    private Farmacia farmaciaAcquisto;
 
     public Farmaco (){
        this.nome ="";
@@ -22,7 +24,9 @@ public class Farmaco {
        this.prezzo= 0.0f;
        this.ricetta ="";
        this.image="";
+      // this.data="";
        this.tipo="";
+       this.farmaciaAcquisto = new Farmacia();
        idCount++;
     }
 
@@ -81,6 +85,12 @@ public class Farmaco {
     public void setRicetta(String ricetta) {
         this.ricetta = ricetta;
     }
+
+   // public void setData(String data){this.data= data;}
+
+    public void setFarmaciaAcquisto(Farmacia f){this.farmaciaAcquisto = f;}
+
+    public Farmacia getFarmaciaAcquisto(){return this.farmaciaAcquisto;}
 
 }
 
