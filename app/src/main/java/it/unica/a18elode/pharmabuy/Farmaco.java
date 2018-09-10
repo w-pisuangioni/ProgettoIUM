@@ -16,6 +16,7 @@ public class Farmaco {
     private Farmacia farmaciaAcquisto;
     private Farmacia farmaciaOrdine;
     private Date data;
+    private Date dataRitiro;
 
     public Farmaco (){
        this.nome ="";
@@ -99,5 +100,9 @@ public class Farmaco {
     public void setData(Date data){ this.data = data; }
 
     public Date getData(){return this.data;}
+
+    public void setDataRitiro(Date dataRitiro){ this.dataRitiro = dataRitiro; }
+
+    public Date getDataRitiro(){return this.dataRitiro;}
 }
 

@@ -13,6 +13,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
+
 public class RiepilogoOrdine extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawer;
@@ -24,6 +29,7 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
     private TextView prezzo;
     private TextView ricetta;
     private TextView conferma;
+    private TextView data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +68,20 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
 
         conferma=(TextView)findViewById(R.id.confermaO);
         conferma.setText("   Ordine andato a buon fine");
+
+        Date today = new Date();
+        SimpleDateFormat formattedDate = new SimpleDateFormat("dd-MM-yyyy");
+        Calendar c = Calendar.getInstance();
+        Random random = new Random();
+        int i= random.nextInt(5)+1;
+        c.add(Calendar.DATE, i);  // number of days to add
+        String tomorrow = (String)(formattedDate.format(c.getTime()));
+
+        data =(TextView)findViewById(R.id.dataRO);
+        data.setText(("Arrivo previsto il giorno: ")+tomorrow);
+        Medicinali.getClickedFarmaco().setDataRitiro(c.getTime());
+
+
     }
 
 

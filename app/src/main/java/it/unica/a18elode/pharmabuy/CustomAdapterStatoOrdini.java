@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -36,7 +38,10 @@ public class CustomAdapterStatoOrdini extends ArrayAdapter<Farmaco>{
         nome.setText(c.getNome() + " " + c.getTipo());
         ImageView anteprima =(ImageView)convertView.findViewById(R.id.anteprimaSO);
         descrizione.setText(c.getDescrizione()); //AGGIUNGERE DISPONIBILITà
-        data.setText("Tempo stimato ricezione prodotto:\n3 giorni lavorativi");
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy ");
+        data.setText(("Data ricezione prodotto:\n")+ dateFormat.format(c.getDataRitiro()));
+
         farmaciaA.setText(c.getFarmaciaOrdine().getNome()+(" ")+c.getFarmaciaOrdine().getVia());
         ricetta.setText(c.getRicetta());
         Context context = anteprima.getContext();
