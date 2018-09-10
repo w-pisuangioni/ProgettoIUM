@@ -2,9 +2,6 @@ package it.unica.a18elode.pharmabuy;
 
 import java.util.ArrayList;
 
-/**
- * Created by Utente on 19/02/2018.
- */
 
 public class FarmacoFactory {
 

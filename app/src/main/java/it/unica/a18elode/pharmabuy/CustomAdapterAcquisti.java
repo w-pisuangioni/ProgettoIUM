@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 
 public class CustomAdapterAcquisti extends ArrayAdapter<Farmaco>{
     /*private static int farmacia = 0;
@@ -21,7 +21,7 @@ public class CustomAdapterAcquisti extends ArrayAdapter<Farmaco>{
                                  List objects) {
         super(context, textViewResourceId, objects);
     }
-
+    DateFormat dateFormat = new SimpleDateFormat("\nHH:mm:ss dd/MM/yyyy ");
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -36,7 +36,7 @@ public class CustomAdapterAcquisti extends ArrayAdapter<Farmaco>{
         nome.setText(c.getNome() + " " + c.getTipo());
         ImageView anteprima =(ImageView)convertView.findViewById(R.id.anteprimaAcquisto);
         descrizione.setText(c.getDescrizione()); //AGGIUNGERE DISPONIBILITà
-        data.setText("Data di acquisto: 14/09/2018");
+        data.setText("Data di acquisto: " + dateFormat.format(c.getData()));
         //farmaciaA.setText((listFarmacieAqquisti.get(farmacia-1).getNome())+(" ")+listFarmacieAqquisti.get(farmacia-1).getVia());
         farmaciaA.setText(c.getFarmaciaAcquisto().getNome()+(" ")+c.getFarmaciaAcquisto().getVia());
         Context context = anteprima.getContext();

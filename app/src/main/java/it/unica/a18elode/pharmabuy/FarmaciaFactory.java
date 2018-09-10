@@ -4,9 +4,6 @@ import android.os.Debug;
 
 import java.util.ArrayList;
 
-/**
- * Created by Willy on 22/02/2018.
- */
 
 public class FarmaciaFactory {
 

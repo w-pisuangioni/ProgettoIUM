@@ -13,6 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Riepilogo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawer;
@@ -24,6 +28,7 @@ public class Riepilogo extends AppCompatActivity implements NavigationView.OnNav
     private TextView prezzo;
     private TextView ricetta;
     private TextView conferma;
+    private TextView data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +67,11 @@ public class Riepilogo extends AppCompatActivity implements NavigationView.OnNav
 
         conferma=(TextView)findViewById(R.id.conferma);
         conferma.setText("   Acquisto andato a buon fine");
+
+        data=(TextView)findViewById(R.id.dataR);
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy ");
+        Date date = new Date();
+        data.setText(("Data di acquisto: ")+dateFormat.format(date));
     }
 
 

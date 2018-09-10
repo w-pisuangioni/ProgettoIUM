@@ -3,9 +3,6 @@ package it.unica.a18elode.pharmabuy;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Willy on 22/02/2018.
- */
 
 public class Farmacia {
 

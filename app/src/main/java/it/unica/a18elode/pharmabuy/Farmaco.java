@@ -1,8 +1,7 @@
 package it.unica.a18elode.pharmabuy;
 
-/**
- * Created by Utente on 19/02/2018.
- */
+import java.util.Date;
+
 
 public class Farmaco {
 
@@ -14,9 +13,9 @@ public class Farmaco {
     private String ricetta;
     private String image;
     private String tipo;
-   // private String data;
     private Farmacia farmaciaAcquisto;
     private Farmacia farmaciaOrdine;
+    private Date data;
 
     public Farmaco (){
        this.nome ="";
@@ -31,6 +30,7 @@ public class Farmaco {
        this.farmaciaOrdine = new Farmacia();
        idCount++;
     }
+
 
     public String getTipo() {
         return tipo;
@@ -88,8 +88,6 @@ public class Farmaco {
         this.ricetta = ricetta;
     }
 
-   // public void setData(String data){this.data= data;}
-
     public void setFarmaciaAcquisto(Farmacia f){this.farmaciaAcquisto = f;}
 
     public Farmacia getFarmaciaAcquisto(){return this.farmaciaAcquisto;}
@@ -98,5 +96,8 @@ public class Farmaco {
 
     public Farmacia getFarmaciaOrdine(){return this.farmaciaOrdine;}
 
+    public void setData(Date data){ this.data = data; }
+
+    public Date getData(){return this.data;}
 }
 

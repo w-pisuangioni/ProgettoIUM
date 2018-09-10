@@ -19,6 +19,10 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Acquisto extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
@@ -29,6 +33,8 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
     private TextView prezzo;
     private TextView ricetta;
     private Button buy;
+
+    Date date = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +82,7 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
             public void onClick(View v) {
                 Intent goToMed = new Intent(Acquisto.this, Riepilogo.class);
                 Medicinali.getClickedFarmaco().setFarmaciaAcquisto(MedicinaleScelto.getClickedFarmacia());
+                Medicinali.getClickedFarmaco().setData(date);
                 AcquistiRecenti.addAcquisto(Medicinali.getClickedFarmaco());
                 //CustomAdapterAcquisti.addFarmaciaAcquisti(MedicinaleScelto.getClickedFarmacia());
                 startActivity(goToMed);
