@@ -84,7 +84,7 @@ public class MedicinaleScelto  extends AppCompatActivity implements NavigationVi
 
         //mostra il nome del farmaco cliccato
         nameClicked = (TextView)findViewById(R.id.selected_farmaco);
-        nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
+        nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+("\n")+Medicinali.getClickedFarmaco().getTipo() );
 
         //mostra l'immagine del farmaco cliccato
         imageClicked=(ImageView)findViewById(R.id.selected_image);

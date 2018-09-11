@@ -35,6 +35,7 @@
             android:id="@+id/selected_farmaco"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:background="#00B945"
             android:textColor="#ffffff"
             />
 
@@ -67,7 +68,6 @@
             android:textSize="22sp"
             android:textStyle="bold"
             android:textAlignment="center"
-
             android:textColor="#ffffff"
             android:text="Disponibile:"/>
 
