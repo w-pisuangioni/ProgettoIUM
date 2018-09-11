@@ -104,7 +104,9 @@ public class Medicinali extends AppCompatActivity implements NavigationView.OnNa
 
         if(id == R.id.homeDrawer)
         {
-            Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+            Intent goToFarm = new Intent(Medicinali.this, Menu.class);
+
+            startActivity(goToFarm);
         }
         if(id == R.id.medicinaliDrawer)
         {

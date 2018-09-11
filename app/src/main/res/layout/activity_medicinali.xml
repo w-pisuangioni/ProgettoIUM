@@ -45,6 +45,7 @@
             android:selectAllOnFocus="true"
             android:singleLine="false"
             android:visibility="visible"
+            android:hint=" Cerca Medicinale"
             />
         <ListView
             android:id="@+id/listViewMedicinali"

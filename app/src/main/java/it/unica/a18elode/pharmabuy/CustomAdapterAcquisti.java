@@ -49,5 +49,6 @@ public class CustomAdapterAcquisti extends ArrayAdapter<Farmaco>{
         farmacia++;
         listFarmacieAqquisti.add(f);
     }*/
+
 }
 

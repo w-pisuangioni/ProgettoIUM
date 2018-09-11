@@ -43,13 +43,34 @@ public class FarmacieTurno extends AppCompatActivity implements NavigationView.O
         //listview
         final ListView mylistMedicinali = (ListView) findViewById(R.id.listViewFarmacieTurno);
         List listFarmacie = new LinkedList();
+        EditText theFilter = (EditText) findViewById(R.id.searchFilterFarmacie);
         for (int i=0 ;i < (FarmaciaFactory.getInstance().getListaFarmacie()).size(); ++i){
             listFarmacie.add(FarmaciaFactory.getInstance().getListaFarmacie().get(i));
         }
         adapter = new CustomAdapterFarmacie(this, R.layout.rowcustomturno,listFarmacie);
+
         mylistMedicinali.setAdapter(adapter);
 
+
+        theFilter.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                (FarmacieTurno.this).adapter.getFilter().filter(charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){

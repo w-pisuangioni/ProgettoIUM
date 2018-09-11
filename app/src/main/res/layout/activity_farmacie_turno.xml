@@ -34,12 +34,25 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="0dp"
             >
+            <EditText
+                android:id="@+id/searchFilterFarmacie"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:dividerHeight="2dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="false"
+                android:visibility="visible"
+                android:hint="  Cerca Farmacia"
+                />
 
             <ListView
                 android:id="@+id/listViewFarmacieTurno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:layout_below="@id/searchFilterFarmacie"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/list_view_background"
