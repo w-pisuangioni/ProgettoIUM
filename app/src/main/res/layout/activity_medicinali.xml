@@ -23,7 +23,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:background="@drawable/logo" />
+            android:background="@drawable/logo"
+            />
 
     </RelativeLayout>
 
@@ -49,13 +50,13 @@
             />
         <ListView
             android:id="@+id/listViewMedicinali"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
-        android:background="@drawable/list_view_background"
-            android:divider="#ffffff"
-            android:dividerHeight="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="58dp"
+            android:background="@drawable/list_view_background"
+            android:divider="#00B945"
+            android:dividerHeight="3dp"
             />
     </RelativeLayout>
 

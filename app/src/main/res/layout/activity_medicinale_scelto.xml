@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer"
     tools:context="it.unica.a18elode.pharmabuy.MedicinaleScelto"
-    android:background="@drawable/sfondo">
+    android:background="#4cbe76">
+    <!--android:background="@drawable/sfondo">-->
 
 
     <RelativeLayout
@@ -34,7 +35,7 @@
             android:id="@+id/selected_farmaco"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#0000e0"
+            android:textColor="#ffffff"
             />
 
         <ImageView
@@ -63,10 +64,12 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="55dp"
             android:id="@+id/farmacieDisp"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#0000e0"
-            android:text="Farmacie in cui è disponibile:"/>
+            android:textAlignment="center"
+
+            android:textColor="#ffffff"
+            android:text="Disponibile:"/>
 
         <ListView
             android:id="@+id/listViewMedicinaleScelto"
@@ -75,8 +78,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="90dp"
             android:background="@drawable/list_view_background"
-            android:divider="#ffffff"
-            android:dividerHeight="2dp"
+            android:divider="#4cbe76"
+            android:dividerHeight="5dp"
             />
 
         <!--</RelativeLayout>
@@ -94,10 +97,12 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:id="@+id/farmacieNonDispM"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#0000e0"
-            android:text="Farmacie in cui non è disponibile:"
+            android:textColor="#ffffff"
+            android:text="Non Disponibile:"
+            android:textAlignment="center"
+
             android:layout_below="@id/listViewMedicinaleScelto"/>
 
 
@@ -109,8 +114,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/farmacieNonDispM"
             android:background="@drawable/list_view_background"
-            android:divider="#ffffff"
-            android:dividerHeight="2dp"
+            android:divider="#4cbe76"
+            android:dividerHeight="5dp"
             />
     </RelativeLayout>
 

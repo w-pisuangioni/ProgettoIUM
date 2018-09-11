@@ -56,8 +56,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/list_view_background"
-                android:divider="#ffffff"
-                android:dividerHeight="2dp"
+                android:divider="#00B945"
+                android:dividerHeight="3dp"
                 />
 
         </RelativeLayout>
