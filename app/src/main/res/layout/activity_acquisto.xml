@@ -113,7 +113,9 @@
         android:text="    Acquista"
         android:textAlignment="textStart"
         android:textColor="#000000"
-        android:textSize="25dp" />
+        android:textSize="22dp"
+        android:drawableLeft="@drawable/cart"
+        android:paddingLeft="20dp"/>
 
 </RelativeLayout>
 

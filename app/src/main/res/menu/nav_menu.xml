@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/hm"
+        android:checkableBehavior="single">
+        <item android:id="@+id/homeDrawer"
+            android:title="Home"
+            android:icon="@drawable/home"
+            >
+        </item>
+    </group>
+    <group android:id="@+id/fm">
+        <item android:id="@+id/farmacieDrawer"
+            android:title="Farmacie"
+            android:icon="@drawable/hosp">
+        </item>
+    </group>
+    <group android:id="@+id/md">
+        <item android:id="@+id/medicinaliDrawer"
+            android:title="Medicinali"
+            android:icon="@drawable/pharma"
+            >
+        </item>
+    </group>
+    <group android:id="@+id/ar">
+        <item android:id="@+id/recentBuy"
+            android:title="Acquisti Recenti"
+            android:icon="@drawable/history">
+        </item>
+    </group>
+    <group android:id="@+id/so">
+        <item android:id="@+id/orderState"
+            android:title="Stato Ordini"
+            android:icon="@drawable/order">
+        </item>
+    </group>
 
-    <item android:id="@+id/homeDrawer"
-        android:title="Home">
-    </item>
-    <item android:id="@+id/farmacieDrawer"
-        android:title="Farmacie">
-    </item>
-    <item android:id="@+id/medicinaliDrawer"
-        android:title="Medicinali">
-    </item>
-    <item android:id="@+id/recentBuy"
-        android:title="Acquisti Recenti">
-    </item>
-    <item android:id="@+id/orderState"
-        android:title="Stato Ordini">
-    </item>
 </menu>
