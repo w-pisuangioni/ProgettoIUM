@@ -101,6 +101,7 @@
         />
 
     <Button
+        android:onClick="ShowPopup"
         android:id="@+id/button_acquisto"
         android:layout_width="300dp"
         style="@style/Widget.AppCompat.Button"
