@@ -45,7 +45,11 @@ public class AcquistiRecenti extends AppCompatActivity implements NavigationView
         listFarmaci.add(buy);
     }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){

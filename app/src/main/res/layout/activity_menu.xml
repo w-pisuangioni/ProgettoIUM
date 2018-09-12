@@ -52,7 +52,6 @@
             android:textColor="#ffffff"
             android:textSize="25dp" />
 
-
     </RelativeLayout>
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
@@ -62,5 +61,6 @@
         android:layout_gravity="start"
         app:theme="@style/PopupMenu">
     </android.support.design.widget.NavigationView>
+
 
 </android.support.v4.widget.DrawerLayout>

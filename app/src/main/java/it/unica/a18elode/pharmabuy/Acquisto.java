@@ -74,6 +74,11 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
 
         init();
     }
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
 
     public void init() {
         buy = (Button) findViewById(R.id.button_acquisto);
@@ -88,6 +93,7 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
                 startActivity(goToMed);
             }
         });
+        
 
     }
 

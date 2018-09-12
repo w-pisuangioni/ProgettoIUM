@@ -13,15 +13,12 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 import java.util.LinkedList;
 import java.util.List;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class Medicinali extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
@@ -32,6 +29,12 @@ public class Medicinali extends AppCompatActivity implements NavigationView.OnNa
 
     private static Farmaco clickedFarmaco;
     private TextView nameClicked;
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

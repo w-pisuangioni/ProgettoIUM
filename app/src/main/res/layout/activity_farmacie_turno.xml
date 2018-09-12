@@ -15,21 +15,21 @@
             tools:layout_editor_absoluteY="2dp"
             tools:ignore="MissingConstraints">
 
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/logo"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/logo" />
+                android:background="@drawable/logo" /> -->
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="0dp"
@@ -44,7 +44,8 @@
                 android:selectAllOnFocus="true"
                 android:singleLine="false"
                 android:visibility="visible"
-                android:hint="  Cerca Farmacia"
+                android:hint="Cerca Farmacia"
+                android:paddingLeft="8dp"
                 />
 
             <ListView
@@ -53,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/searchFilterFarmacie"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/list_view_background"
                 android:divider="#00B945"

@@ -114,6 +114,12 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
         return false;
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
     public void init() {
         order = (Button) findViewById(R.id.button_ordine);
         order.setOnClickListener(new View.OnClickListener() {

@@ -50,6 +50,11 @@ public class StatoOrdini extends AppCompatActivity implements NavigationView.OnN
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){

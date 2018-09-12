@@ -86,6 +86,12 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
 
 
     @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item){
         if(toggle.onOptionsItemSelected(item))
         {

@@ -74,6 +74,11 @@ public class Riepilogo extends AppCompatActivity implements NavigationView.OnNav
         data.setText(("Data di acquisto: ")+dateFormat.format(date));
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){

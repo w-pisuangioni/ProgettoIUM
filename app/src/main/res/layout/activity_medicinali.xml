@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer"
     tools:context="it.unica.a18elode.pharmabuy.Medicinali"
-    android:background="@drawable/sfondo">
+    android:background="@drawable/sfondo"
+    >
 
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:id="@+id/menu_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,12 +27,12 @@
             android:background="@drawable/logo"
             />
 
-    </RelativeLayout>
+    </RelativeLayout> -->
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         >
@@ -46,14 +47,16 @@
             android:selectAllOnFocus="true"
             android:singleLine="false"
             android:visibility="visible"
-            android:hint=" Cerca Medicinale"
+            android:hint="Cerca Medicinale"
+            android:paddingLeft="8dp"
             />
         <ListView
             android:id="@+id/listViewMedicinali"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="58dp"
+            android:layout_below="@id/searchFilter"
+            android:layout_marginTop="20dp"
             android:background="@drawable/list_view_background"
             android:divider="#00B945"
             android:dividerHeight="3dp"

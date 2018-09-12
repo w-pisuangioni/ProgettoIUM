@@ -23,14 +23,14 @@
         tools:layout_editor_absoluteY="2dp"
         tools:ignore="MissingConstraints">
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/logo"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:background="@drawable/logo" />
+            android:background="@drawable/logo" />-->
 
         <TextView
             android:layout_width="250dp"
