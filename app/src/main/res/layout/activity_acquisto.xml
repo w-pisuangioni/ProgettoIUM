@@ -7,6 +7,7 @@
     tools:context="it.unica.a18elode.pharmabuy.Acquisto"
     android:id="@+id/drawer"
     android:background="@drawable/sfondo">
+
     <RelativeLayout
         android:layout_height="match_parent"
         android:layout_width="match_parent"
