@@ -82,8 +82,9 @@ public class Medicinali extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
+
                 Intent intent = new Intent(Medicinali.this, MedicinaleScelto.class);
-                clickedFarmaco = (Farmaco)mylistMedicinali.getItemAtPosition(position);
+                clickedFarmaco = (Farmaco)adapter.getItemAtPosition(position);
 
                 startActivity(intent);
 
