@@ -16,7 +16,8 @@
         android:textColor="#ffffff"
         android:textSize="21sp"
         android:background="#00B945"
-        android:paddingLeft="2dp"/>
+        android:paddingLeft="2dp"
+        android:drawableRight="@drawable/arrow_forward"/>
 
     <TextView
         android:id="@+id/textViewIndirizzo"

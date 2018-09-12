@@ -55,7 +55,7 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
 
         //mostra il nome del farmaco cliccato
         nameClicked = (TextView)findViewById(R.id.selected_farmacoA);
-        nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
+        nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+("\n")+Medicinali.getClickedFarmaco().getTipo() );
 
         descFarmacia = (TextView)findViewById(R.id.descrizioneFarmacoA);
         descFarmacia.setText(Medicinali.getClickedFarmaco().getDescrizione());
@@ -67,7 +67,7 @@ public class Acquisto extends AppCompatActivity implements NavigationView.OnNavi
         imageClicked.setImageResource(id);
 
         nameFarmacia=(TextView)findViewById(R.id.selected_farmacia);
-        nameFarmacia.setText(MedicinaleScelto.getClickedFarmacia().getNome()+(" ")+MedicinaleScelto.getClickedFarmacia().getVia()+(" ")+MedicinaleScelto.getClickedFarmacia().getCivico());
+        nameFarmacia.setText(MedicinaleScelto.getClickedFarmacia().getNome()+("\n")+MedicinaleScelto.getClickedFarmacia().getVia()+(", ")+MedicinaleScelto.getClickedFarmacia().getCivico());
 
         Float prz = Medicinali.getClickedFarmaco().getPrezzo();
         prezzo=(TextView)findViewById(R.id.selected_prezzo);
