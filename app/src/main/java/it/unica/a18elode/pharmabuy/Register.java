@@ -64,9 +64,9 @@ public class Register extends AppCompatActivity {
                         !(confPsw.getText().toString().equals(""))&&
                         password.getText().toString().equals(confPsw.getText().toString())){
                     PersonFactory.getInstance().getListaPersone().add(new Person(
-                            username.getText().toString(),
+                            username.getText().toString().toLowerCase(),
                             password.getText().toString(),
-                            email.getText().toString())
+                            email.getText().toString().toLowerCase())
                     );
                     Intent goToHome = new Intent(Register.this, MainActivity.class);
                     startActivity(goToHome);

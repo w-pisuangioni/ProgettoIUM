@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText username = (EditText) findViewById(R.id.username);
                 EditText password = (EditText) findViewById(R.id.password);
-                if (PersonFactory.getInstance().getIdByUserAndPassword(username.getText().toString(),password.getText().toString()) != -1 ||
-                    PersonFactory.getInstance().getIdByEmailAndPassword(username.getText().toString(),password.getText().toString()) != -1 ){
+                if (PersonFactory.getInstance().getIdByUserAndPassword(username.getText().toString().toLowerCase(),password.getText().toString()) != -1 ||
+                    PersonFactory.getInstance().getIdByEmailAndPassword(username.getText().toString().toLowerCase(),password.getText().toString()) != -1 ){
                     Intent goToHome = new Intent(MainActivity.this, Menu.class);
 
                     startActivity(goToHome);
