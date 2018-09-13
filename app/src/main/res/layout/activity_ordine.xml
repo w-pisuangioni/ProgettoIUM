@@ -141,6 +141,7 @@
             />
 
         <Button
+            android:onClick="ShowPopupS"
             android:id="@+id/button_ordine"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="300dp"

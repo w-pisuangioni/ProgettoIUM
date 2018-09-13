@@ -1,7 +1,10 @@
 package it.unica.a18elode.pharmabuy;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -25,7 +28,7 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
     private TextView prezzo;
     private TextView ricetta;
     private Button order;
-
+    Dialog myDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +64,8 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
 
         ricetta = (TextView) findViewById(R.id.selected_ricettaO);
         ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
-
-        init();
+        myDialog = new Dialog(this);
+        //init();
     }
 
     @Override
@@ -120,7 +123,7 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
         return true;
     }
 
-    public void init() {
+   /* public void init() {
         order = (Button) findViewById(R.id.button_ordine);
         order.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,5 +135,58 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
             }
         });
 
+    }*/
+
+    public void ConfOrdine(View v) {
+        Intent goToMed = new Intent(Ordine.this, RiepilogoOrdine.class);
+        Medicinali.getClickedFarmaco().setFarmaciaOrdine(MedicinaleScelto.getClickedFarmaciaND());
+        StatoOrdini.addOrdine(Medicinali.getClickedFarmaco());
+        startActivity(goToMed);
+
+    }
+
+
+    public void ShowPopupS(View v) {
+        TextView txtclose;
+        ImageView popMed;
+
+
+        Button btnFollow;
+        myDialog.setContentView(R.layout.custompopup_so);
+        txtclose =(TextView) myDialog.findViewById(R.id.txtcloseS);
+        txtclose.setText("X");
+
+        //nome med
+        TextView popName = myDialog.findViewById(R.id.pop_medicinaleS);
+        popName.setText(Medicinali.getClickedFarmaco().getNome());
+
+        //immagine popup
+        popMed=(ImageView)myDialog.findViewById(R.id.pop_imgS);
+        Context context = popMed.getContext();
+        int id = context.getResources().getIdentifier(Medicinali.getClickedFarmaco().getImage(), "drawable", context.getPackageName());
+        popMed.setImageResource(id);
+
+        //farmacia popup
+        TextView popFarmacia=(TextView)myDialog.findViewById(R.id.pop_farmaciaS);
+        popFarmacia.setText(MedicinaleScelto.getClickedFarmaciaND().getNome()+("\n")+(MedicinaleScelto.getClickedFarmaciaND().getCitta()));
+
+        //prezzo
+        Float prz=Medicinali.getClickedFarmaco().getPrezzo();
+        TextView popPrezzo=(TextView)myDialog.findViewById(R.id.pop_prezzoS);
+        popPrezzo.setText(prz.toString()+(" €"));
+
+        //tipo
+        TextView popTipo =(TextView)myDialog.findViewById(R.id.pop_tipoS);
+        popTipo.setText(Medicinali.getClickedFarmaco().getTipo());
+
+        btnFollow = (Button) myDialog.findViewById(R.id.btnfollowS);
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 }

@@ -38,7 +38,8 @@ public class FarmacoFactory {
 
         Farmaco farmaco3 = new Farmaco();
         farmaco3.setId(3);
-        farmaco3.setNome("Oki");
+        farmaco3.setNome("Oki 80mg");
+        farmaco3.setTipo("30 Bustine");
         farmaco3.setDescrizione("Medicinale usato per scopi terapeutici per curare patologie mediche varie." +
                 "Trattamento sintomatico e di breve durata di stati infiammatori associati a dolore quali quelli a carico dell'apparato" +
                 " osteoarticolare, dolore post operatorio e otiti.");
