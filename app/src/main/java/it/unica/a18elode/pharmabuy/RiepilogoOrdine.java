@@ -32,7 +32,7 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
     private TextView ricetta;
     private TextView conferma;
     private TextView data;
-    public Button acquistiRecenti;
+    public Button statoOrdine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,16 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
         NavigationView navigationView=(NavigationView)findViewById(R.id.navigation_view_riepilogoO);
         navigationView.setNavigationItemSelectedListener(this);
 
+        statoOrdine = (Button) findViewById(R.id.acquistiRecenti_buttonO);
+        statoOrdine.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent goToAcqRec = new Intent(RiepilogoOrdine.this, StatoOrdini.class);
+
+                startActivity(goToAcqRec);
+            }
+        });
+
         Date today = new Date();
         SimpleDateFormat formattedDate = new SimpleDateFormat("dd-MM-yyyy");
         Calendar c = Calendar.getInstance();
@@ -53,16 +63,10 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
         int i= random.nextInt(5)+1;
         c.add(Calendar.DATE, i);  // number of days to add
         String tomorrow = (String)(formattedDate.format(c.getTime()));
-        acquistiRecenti = (Button) findViewById(R.id.acquistiRecenti_button);
-        acquistiRecenti.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent goToAcqRec = new Intent(RiepilogoOrdine.this, AcquistiRecenti.class);
 
-                startActivity(goToAcqRec);
-            }
-        });
-
+        data =(TextView)findViewById(R.id.dataRO);
+        data.setText(("Arrivo previsto il giorno: ")+tomorrow);
+        Medicinali.getClickedFarmaco().setDataRitiro(c.getTime());
     }
 
 
