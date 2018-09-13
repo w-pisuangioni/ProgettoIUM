@@ -105,5 +105,9 @@ public class CustomAdapter extends ArrayAdapter<Farmaco> implements Filterable {
         };
         return filter;
     }
+    public Farmaco getItemAtPosition(int position)
+    {
+        return tempListData.get(position);
+    }
 
 }
