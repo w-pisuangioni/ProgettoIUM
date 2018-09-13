@@ -29,9 +29,9 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="300dp"
             android:layout_height="60dp"
+            android:layout_alignStart="@+id/farmacie_button"
             android:layout_below="@+id/logo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/buttons"
             android:clickable="true"
             android:text="Medicinali"
@@ -45,10 +45,38 @@
             android:layout_height="60dp"
             android:layout_below="@+id/button_medicinali"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/buttons"
             android:clickable="true"
             android:text="Farmacie di turno"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/acquistiRecenti_button"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/farmacie_button"
+            android:layout_below="@+id/farmacie_button"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/buttons"
+            android:clickable="true"
+            android:text="Acquisti Recenti"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/statoOrdini_button"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/acquistiRecenti_button"
+            android:layout_below="@+id/acquistiRecenti_button"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/buttons"
+            android:clickable="true"
+            android:text="Stato Ordini"
             android:textColor="#ffffff"
             android:textSize="25dp" />
 

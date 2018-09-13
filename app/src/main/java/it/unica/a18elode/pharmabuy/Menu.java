@@ -17,10 +17,14 @@ public class Menu extends AppCompatActivity implements NavigationView.OnNavigati
     private ActionBarDrawerToggle toggle;
     public Button medicinali;
     public Button farmacie;
+    public Button acquistiRecenti;
+    public Button statoOrdini;
 
     public void init() {
         medicinali = (Button) findViewById(R.id.button_medicinali);
         farmacie = (Button) findViewById(R.id.farmacie_button);
+        acquistiRecenti = (Button) findViewById(R.id.acquistiRecenti_button);
+        statoOrdini = (Button) findViewById(R.id.statoOrdini_button);
         medicinali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +39,22 @@ public class Menu extends AppCompatActivity implements NavigationView.OnNavigati
                 Intent goToFarm = new Intent(Menu.this, FarmacieTurno.class);
 
                 startActivity(goToFarm);
+            }
+        });
+        acquistiRecenti.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent goToAcqRec = new Intent(Menu.this, AcquistiRecenti.class);
+
+                startActivity(goToAcqRec);
+            }
+        });
+        statoOrdini.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent goToStatOrd = new Intent(Menu.this, StatoOrdini.class);
+
+                startActivity(goToStatOrd);
             }
         });
     }

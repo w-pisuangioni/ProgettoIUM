@@ -141,7 +141,7 @@
         android:layout_marginTop="40dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/buttons"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:textSize="18dp"/>
 
 </LinearLayout>

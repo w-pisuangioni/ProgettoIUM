@@ -53,7 +53,7 @@ public class Ordine extends AppCompatActivity implements NavigationView.OnNaviga
         imageClicked.setImageResource(id);
 
         nameFarmacia = (TextView) findViewById(R.id.selected_farmaciaO);
-        nameFarmacia.setText(MedicinaleScelto.getClickedFarmaciaND().getNome() + (" ") + MedicinaleScelto.getClickedFarmaciaND().getVia() + (" ") + MedicinaleScelto.getClickedFarmaciaND().getCivico());
+        nameFarmacia.setText(MedicinaleScelto.getClickedFarmaciaND().getNome() + ("\n") + MedicinaleScelto.getClickedFarmaciaND().getVia() + (", ") + MedicinaleScelto.getClickedFarmaciaND().getCivico());
 
         Float prz = Medicinali.getClickedFarmaco().getPrezzo();
         prezzo = (TextView) findViewById(R.id.selected_prezzoO);

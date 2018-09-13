@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +31,7 @@ public class Riepilogo extends AppCompatActivity implements NavigationView.OnNav
     private TextView ricetta;
     private TextView conferma;
     private TextView data;
+    public Button acquistiRecenti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,37 +44,15 @@ public class Riepilogo extends AppCompatActivity implements NavigationView.OnNav
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationView navigationView=(NavigationView)findViewById(R.id.navigation_view_riepilogo);
         navigationView.setNavigationItemSelectedListener(this);
+        acquistiRecenti = (Button) findViewById(R.id.acquistiRecenti_button);
+        acquistiRecenti.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent goToAcqRec = new Intent(Riepilogo.this, AcquistiRecenti.class);
 
-        //mostra il nome del farmaco cliccato
-        nameClicked = (TextView)findViewById(R.id.selected_farmaco_riepilogo);
-        nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
-
-        descFarmacia = (TextView)findViewById(R.id.descrizioneFarmacoR);
-        descFarmacia.setText(Medicinali.getClickedFarmaco().getDescrizione());
-
-        //mostra l'immagine del farmaco cliccato
-        imageClicked=(ImageView)findViewById(R.id.selected_imageR);
-        Context context = imageClicked.getContext();
-        int id = context.getResources().getIdentifier(Medicinali.getClickedFarmaco().getImage(), "drawable", context.getPackageName());
-        imageClicked.setImageResource(id);
-
-        nameFarmacia=(TextView)findViewById(R.id.selected_farmaciaR);
-        nameFarmacia.setText(MedicinaleScelto.getClickedFarmacia().getNome()+(" ")+MedicinaleScelto.getClickedFarmacia().getVia()+(" ")+MedicinaleScelto.getClickedFarmacia().getCivico());
-
-        Float prz = Medicinali.getClickedFarmaco().getPrezzo();
-        prezzo=(TextView)findViewById(R.id.selected_prezzoR);
-        prezzo.setText(("Prezzo: "+prz.toString()+(" €")));
-
-        ricetta=(TextView)findViewById(R.id.selected_ricettaR);
-        ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
-
-        conferma=(TextView)findViewById(R.id.conferma);
-        conferma.setText("   Acquisto andato a buon fine");
-
-        data=(TextView)findViewById(R.id.dataR);
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy ");
-        Date date = new Date();
-        data.setText(("Data di acquisto: ")+dateFormat.format(date));
+                startActivity(goToAcqRec);
+            }
+        });
     }
 
     @Override

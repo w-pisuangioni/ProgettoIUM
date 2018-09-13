@@ -9,14 +9,6 @@
     android:background="@drawable/sfondo">
 
     <RelativeLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:layout_marginTop="65dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginLeft="28dp"
-        android:background="#abd7b3"></RelativeLayout>
-
-    <RelativeLayout
         android:id="@+id/menu_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,113 +24,41 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/logo" />-->
 
-        <TextView
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="90dp"
-            android:layout_marginLeft="100dp"
-            android:id="@+id/selected_farmaco_riepilogoO"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#0000e0"/>
-
-        <TextView
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/selected_farmaco_riepilogoO"
-            android:id="@+id/descrizioneFarmacoRO"
-            android:textSize="18sp"
-            android:textColor="#000000"/>
-
         <ImageView
-            android:id="@+id/selected_imageRO"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="90dp"
-            />
-        <!--  </RelativeLayout>
-      <RelativeLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content">-->
+            android:id="@+id/confirm_handO"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/orari"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="71dp"
+            android:tint="@color/colorText"
+            app:srcCompat="@drawable/confirm_hand" />
 
         <TextView
-            android:layout_width="320dp"
+            android:id="@+id/textConfirmO"
+            android:layout_width="300dp"
+            android:layout_marginTop="40dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/descrizioneFarmacoRO"
+            android:layout_below="@+id/confirm_handO"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:id="@+id/selected_farmaciaRO"
+            android:text="Congratulazioni!\n\nIl tuo ordine è andato a buon fine!\n\nIl medicinale è stato aggiunto al riepilogo degli ordini."
+            android:textColor="#ffffff"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            />
+            android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/selected_farmaciaRO"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="2dp"
-            android:id="@+id/orariRO"
-            android:textSize="18sp"
-            android:textStyle="italic"
-            android:textColor="#000000"
-            android:text="lun - ven: 9:00-13:00 / 17:00-20:00\nsab: 9:00 - 13:00"
-            />
-
-        <TextView
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/orariRO"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:id="@+id/selected_prezzoRO"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            />
-
-
-        <TextView
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/selected_prezzoRO"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:id="@+id/selected_ricettaRO"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            />
-
-        <TextView
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/selected_ricettaRO"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:id="@+id/dataRO"
-            android:text="Data ritiro: 15-09-2018"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            />
-        <TextView
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/dataRO"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:id="@+id/confermaO"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:background="#d2e907"
-            />
+        <Button
+            android:id="@+id/acquistiRecenti_button"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textConfirmO"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/buttons"
+            android:clickable="true"
+            android:text="Stato Ordini"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
 
 
     </RelativeLayout>

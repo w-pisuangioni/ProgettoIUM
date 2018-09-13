@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +32,7 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
     private TextView ricetta;
     private TextView conferma;
     private TextView data;
+    public Button acquistiRecenti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,32 +46,6 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
         NavigationView navigationView=(NavigationView)findViewById(R.id.navigation_view_riepilogoO);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //mostra il nome del farmaco cliccato
-        nameClicked = (TextView)findViewById(R.id.selected_farmaco_riepilogoO);
-        nameClicked.setText(Medicinali.getClickedFarmaco().getNome()+(" ")+Medicinali.getClickedFarmaco().getTipo() );
-
-        descFarmacia = (TextView)findViewById(R.id.descrizioneFarmacoRO);
-        descFarmacia.setText(Medicinali.getClickedFarmaco().getDescrizione());
-
-        //mostra l'immagine del farmaco cliccato
-        imageClicked=(ImageView)findViewById(R.id.selected_imageRO);
-        Context context = imageClicked.getContext();
-        int id = context.getResources().getIdentifier(Medicinali.getClickedFarmaco().getImage(), "drawable", context.getPackageName());
-        imageClicked.setImageResource(id);
-
-        nameFarmacia=(TextView)findViewById(R.id.selected_farmaciaRO);
-        nameFarmacia.setText(MedicinaleScelto.getClickedFarmaciaND().getNome()+(" ")+MedicinaleScelto.getClickedFarmaciaND().getVia()+(" ")+MedicinaleScelto.getClickedFarmaciaND().getCivico());
-
-        Float prz = Medicinali.getClickedFarmaco().getPrezzo();
-        prezzo=(TextView)findViewById(R.id.selected_prezzoRO);
-        prezzo.setText(("Prezzo: "+prz.toString()+(" €")));
-
-        ricetta=(TextView)findViewById(R.id.selected_ricettaRO);
-        ricetta.setText(Medicinali.getClickedFarmaco().getRicetta());
-
-        conferma=(TextView)findViewById(R.id.confermaO);
-        conferma.setText("   Ordine andato a buon fine");
-
         Date today = new Date();
         SimpleDateFormat formattedDate = new SimpleDateFormat("dd-MM-yyyy");
         Calendar c = Calendar.getInstance();
@@ -76,11 +53,15 @@ public class RiepilogoOrdine extends AppCompatActivity implements NavigationView
         int i= random.nextInt(5)+1;
         c.add(Calendar.DATE, i);  // number of days to add
         String tomorrow = (String)(formattedDate.format(c.getTime()));
+        acquistiRecenti = (Button) findViewById(R.id.acquistiRecenti_button);
+        acquistiRecenti.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent goToAcqRec = new Intent(RiepilogoOrdine.this, AcquistiRecenti.class);
 
-        data =(TextView)findViewById(R.id.dataRO);
-        data.setText(("Arrivo previsto il giorno: ")+tomorrow);
-        Medicinali.getClickedFarmaco().setDataRitiro(c.getTime());
-
+                startActivity(goToAcqRec);
+            }
+        });
 
     }
 
